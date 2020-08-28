@@ -55,7 +55,7 @@ def plot_mae_pT(df, results_path ):
     plt.figure()
     plt.plot([i*dx for i in range(int(r/dx))],MAE1)
     plt.xlabel('pT (in GeV) -->')
-    plt.ylabel('MAE -->')
+    plt.ylabel('MAE/pT -->')
     plt.legend()
     plt.savefig(os.path.join(results_path, 'mae_pt.png'))
     plt.show()
