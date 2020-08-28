@@ -14,7 +14,7 @@ def merge_oofs(results_path, predict):
         df['True_pT'] = 1/df['true_value']
         df['Predicted_pT'] = 1/df['preds']
     
-    df.to_csv('OOF_preds.csv', index=False)
+    df.to_csv(os.path.join(results_path,'OOF_preds.csv'), index=False)
     return df
         
 def ROC_AUC(df):
