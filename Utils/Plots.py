@@ -5,6 +5,7 @@ from sklearn.metrics import f1_score, accuracy_score
 from sklearn.metrics import mean_absolute_error as mae
 
 def plot_epochs_vs_loss(train_loss, val_loss, results_path, fold):
+    plt.figure()
     plt.plot(range(1,1+len(train_loss)), train_loss, label = 'TrainLoss')
     plt.plot(range(1,1+len(val_loss)), val_loss, label = 'ValLoss')
     plt.xlabel('Epoch-->')
@@ -28,6 +29,7 @@ def plot_mae(df, results_path ):
         MAE1.append(p)
         p_=p
     MAE1 = [0]*2*int(1/dx)+MAE1[:r*2-2*int(1/dx)]
+    plt.figure()
     plt.plot([i*dx for i in range(int(r/dx))],MAE1)
     plt.xlabel('pT (in GeV) -->')
     plt.ylabel('MAE -->')
@@ -50,6 +52,7 @@ def plot_mae_pT(df, results_path ):
         MAE1.append(p)
         p_=p
     MAE1 = [0]*2*int(1/dx)+MAE1[:r*2-2*int(1/dx)]
+    plt.figure()
     plt.plot([i*dx for i in range(int(r/dx))],MAE1)
     plt.xlabel('pT (in GeV) -->')
     plt.ylabel('MAE -->')
@@ -62,6 +65,7 @@ def plot_f1_pT_upper(df, results_path ):
     f1 = []
     for i in range(5,121):
         f1.append(f1_score(df['True_pT']>=i, df['Predicted_pT']>=i))
+    plt.figure()
     plt.plot(range(5,121),f1)
     plt.xlabel('pT (in GeV) -->')
     plt.ylabel('F1 (for class pT < x) -->')
@@ -74,6 +78,7 @@ def plot_f1_pT_lower(df, results_path ):
     f1 = []
     for i in range(5,121):
         f1.append(f1_score(df['True_pT']<=i, df['Predicted_pT']<=i))
+    plt.figure()
     plt.plot(range(5,121),f1)
     plt.xlabel('pT (in GeV) -->')
     plt.ylabel('F1 (for class pT < x) -->')
@@ -87,6 +92,7 @@ def plot_accuracy(df, results_path ):
     acc = []
     for i in range(5,121):
         acc.append(accuracy_score(df['True_pT']>=i, df['Predicted_pT']>=i))
+    plt.figure()
     plt.plot(range(5,121),acc)
     plt.xlabel('pT (in GeV) -->')
     plt.ylabel('Accuracy -->')
