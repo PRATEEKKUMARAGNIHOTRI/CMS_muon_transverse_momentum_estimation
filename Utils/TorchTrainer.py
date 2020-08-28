@@ -4,9 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from torch_geometric.data import Dataset, Data, DataLoader
 
-#### Custom Loss Functions ####
-
-
 #### Pytorch Geometric Dataset ###
 class TriggerDataset(Dataset):
     def __init__(self, root='./', features=None, labels=None, indexes=None, transform=None, pre_transform=None):
