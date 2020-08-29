@@ -59,7 +59,6 @@ for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset
 
 df = merge_oofs(results_path, predict)
 if predict=='pT_classses':
-    ROC_AUC(df)
-    
+    ROC_AUC(df)    
 else:
     save_all_plots(df, results_path)

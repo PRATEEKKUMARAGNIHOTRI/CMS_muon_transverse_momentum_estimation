@@ -18,7 +18,8 @@ def merge_oofs(results_path, predict):
     return df
         
 def ROC_AUC(df):
-    print('ROC-AUC - 0-10 GeV - ', roc_auc_score(df['true_value'], df['0-10']))
-    print('ROC-AUC - 10-30 GeV - ', roc_auc_score(df['true_value'], df['10-30']))
-    print('ROC-AUC - 30-100 GeV - ', roc_auc_score(df['true_value'], df['30-100']))
-    print('ROC-AUC - 100-inf GeV - ', roc_auc_score(df['true_value'], df['100-inf']))
+    print('ROC-AUC - 0-10 GeV - ', roc_auc_score((df['true_value']==0)*1.0, df['0-10']))
+    print('ROC-AUC - 10-30 GeV - ', roc_auc_score((df['true_value']==1)*1.0, df['10-30']))
+    print('ROC-AUC - 30-100 GeV - ', roc_auc_score((df['true_value']==2)*1.0, df['30-100']))
+    print('ROC-AUC - 100-inf GeV - ', roc_auc_score((df['true_value']==3)*1.0, df['100-inf']))
+    return None
