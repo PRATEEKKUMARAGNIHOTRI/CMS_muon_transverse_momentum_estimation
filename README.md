@@ -42,8 +42,8 @@ Note: Give absolute paths as argument
 | :---: | :---: | :---: |
 | MAE/pT Histogram | MAE Histogram | Accuracy Histogram |
    
-| ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_morethan_x.png) || ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_lessthan_x.png) |
-| F1_score (class pT>x) - Histogram || F1_score (class pT<x) - Histogram |  
+| : ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_morethan_x.png) : || : ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_lessthan_x.png) : |
+| : F1_score (class pT>x) - Histogram : || : F1_score (class pT<x) - Histogram : |  
     
 ### Four class classification
 
