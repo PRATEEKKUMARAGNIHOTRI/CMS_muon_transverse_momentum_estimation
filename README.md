@@ -39,9 +39,16 @@ Note: Give absolute paths as argument
 * Displaced Muons Samples
 
 | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_mae_pT.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_mae.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_accuracy.png) |
-| --- | --- | --- |
-| MAE/pT Histogram | MAE Histogram | Accuracy Histogram | 
+| :---: | :---: | :---: |
+| MAE/pT Histogram | MAE Histogram | Accuracy Histogram |
 
+<center>
+    
+| ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_morethan_x.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_f1_class_pT_lessthan_x.png) |
+| :---: | :---: |
+| F1_score (class pT>x) - Histogram | F1_score (class pT<x) - Histogram |  
+</center>
+    
 ### Four class classification
 
 * Prompt Muons Samples-1
