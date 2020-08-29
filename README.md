@@ -1,9 +1,6 @@
 # Deep learning algorithms for muon momentum estimation in the CMS Trigger System
 
-During a run, Large Hadron Collider generates about 40 TB data per second. Since It is not feasible to readout and store such a vast amount of data, so a trigger system selects and stores only interesting events or events likely to reveal new physics phenomena. The goal of this project is to benchmark the muon momentum estimation performance of Fully Connected Neural Networks(FCNN), Convolutional Neural Networks(CNN), and Graph Neural Networks(GNN), on the prompt and displaced muon samples collected by CSC stations at CMS to aid trigger system's high transverse momentum muon selection.
-
-## About
-
+The Compact Muon Solenoid (CMS) is a general-purpose detector at the Large Hadron Collider (LHC). During a run, it generates about 40 TB data per second. Since It is not feasible to readout and store such a vast amount of data, so a trigger system selects and stores only interesting events or events likely to reveal new physics phenomena. The goal of this project is to benchmark the muon momentum estimation performance of Fully Connected Neural Networks(FCNN), Convolutional Neural Networks(CNN), and Graph Neural Networks(GNN), on the **prompt and displaced muon samples collected by CSC stations at CMS** to aid trigger system's high transverse momentum muon selection.
 
 
 ## How to use
