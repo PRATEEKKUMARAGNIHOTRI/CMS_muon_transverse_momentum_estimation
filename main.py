@@ -58,7 +58,7 @@ for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset
         plot_epochs_vs_loss(train_loss, val_loss, results_path, fold)
 
 df = merge_oofs(results_path, predict)
-if predict=='pT_classses':
+if predict=='pT_classes':
     ROC_AUC(df)    
 else:
     save_all_plots(df, results_path)
