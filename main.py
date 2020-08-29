@@ -10,7 +10,7 @@ from Models.FCNN import FCNN
 from Utils.PreprocessedData import get_data
 from Utils.TFTrainer import train_nn
 from Utils.TorchTrainer import train_gnn
-from Utils.Plots import save_all_plots, plot_epochs_vs_loss
+from Utils.Plots import save_all_plots, plot_epochs_vs_loss, plot_ROC_AUC
 from Utils.utility import *
 
 parser = argparse.ArgumentParser()
@@ -59,6 +59,7 @@ for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset
 
 df = merge_oofs(results_path, predict)
 if predict=='pT_classes':
-    ROC_AUC(df)    
+    ROC_AUC(df)
+    plot_ROC_AUC(df)
 else:
     save_all_plots(df, results_path)

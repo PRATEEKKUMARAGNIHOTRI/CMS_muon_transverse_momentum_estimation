@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.metrics import f1_score, accuracy_score
+from sklearn.metrics import f1_score, accuracy_score, roc_curve, auc
 from sklearn.metrics import mean_absolute_error as mae
 
 def plot_epochs_vs_loss(train_loss, val_loss, results_path, fold):
@@ -107,3 +107,41 @@ def save_all_plots(df, results_path ):
     plot_f1_pT_upper(df, results_path )
     plot_mae_pT(df, results_path )
     plot_mae(df, results_path )
+    
+def plot_ROC_AUC(df):
+    classes = ['0-10','10-30','30-100','100-inf','micro','macro']
+    for i in range(6):
+        try:
+            fpr,tpr,_ = roc_curve(df['pT_classes']==i, df[classes[i]])
+            roc_auc = auc(fpr, tpr)
+        except:
+            pppppppp = 1
+        if i==4:
+            y_score = df[classes[:4]].to_numpy()
+            y_test = np.array([df['pT_classes']==0,df['pT_classes']==1,df['pT_classes']==2,df['pT_classes']==3]).T*1.0
+            fpr, tpr, _ = roc_curve(y_test.ravel(), y_score.ravel())
+            roc_auc = auc(fpr, tpr)
+        if i==5:
+            y_score = df[classes[:4]].to_numpy()
+            y_test = np.array([df['pT_classes']==0,df['pT_classes']==1,df['pT_classes']==2,df['pT_classes']==3]).T*1.0
+            all_fpr = np.unique(np.concatenate([roc_curve(df['pT_classes']==i, df[classes[i]])[0] for i in range(4)]))
+            mean_tpr = np.zeros_like(all_fpr)
+            for j in range(4):
+                A = roc_curve(df['pT_classes']==j, df[classes[j]])
+                mean_tpr += interp(all_fpr, A[0], A[1])
+            mean_tpr /= 4
+            fpr = all_fpr
+            tpr = mean_tpr
+            roc_auc = auc(fpr, tpr)
+        plt.figure()
+        plt.plot(fpr, tpr, color='darkorange',
+                 lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+        plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('Receiver operating characteristic ( '+classes[i]+ ' )')
+        plt.legend(loc="lower right")
+        plt.savefig(os.path.join(results_path, 'roc_curve_'+classes[i]+'.png'))
+        plt.show()
