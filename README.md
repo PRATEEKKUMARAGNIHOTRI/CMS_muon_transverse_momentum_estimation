@@ -26,5 +26,6 @@ python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
                 --folds="0,1,2,3,4,5,6,7,8,9" \
                 --results='/kaggle/working/results'
 ```
+Note: Give absolute paths as argument
 
 ## Results
