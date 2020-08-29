@@ -10,13 +10,15 @@ The code is
 
 > An example of how to use is available [here](https://www.kaggle.com/prateekagnihotri/cms-example)
 
-|python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \ |
-|                --dataset='prompt_new'\                               |
-|                --predict='pT'\                                       |
-|                --model='FCNN'\                                       |
-|                --epochs=50 \                                         |
-|                --batch_size=512\                                     |
-|                --folds="0,1,2,3,4,5,6,7,8,9" \                       |
-|               --results='/kaggle/working/results'                    |
+'''sh
+python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
+                --dataset='prompt_new'\
+                --predict='pT'\
+                --model='FCNN'\
+                --epochs=50 \
+                --batch_size=512\
+                --folds="0,1,2,3,4,5,6,7,8,9" \
+                --results='/kaggle/working/results'
+'''
 
 ## Results
