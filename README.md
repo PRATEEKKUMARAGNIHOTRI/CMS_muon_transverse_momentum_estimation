@@ -30,7 +30,7 @@ Note: Give absolute paths as argument
 
 ## Results
 
-#### Four class classification
+### Four class classification
 
 * Prompt Muons Samples-1
 
