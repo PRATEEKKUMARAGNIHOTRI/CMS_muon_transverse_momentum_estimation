@@ -10,6 +10,12 @@ The code is
 
 > An example of how to use is available [here](https://www.kaggle.com/prateekagnihotri/cms-example)
 
+1. Make sure that all the libraries mentioned in [requirements.txt](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/requirements.txt) are installed
+2. Clone the repo
+```sh
+https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation.git
+```
+3. Change current directory to the cloned directory and execute main.py with the required arguments
 ```sh
 python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
                 --dataset='prompt_new'\
