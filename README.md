@@ -29,3 +29,26 @@ python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
 Note: Give absolute paths as argument
 
 ## Results
+
+#### Four class classification
+
+* Prompt Muons Samples-1
+
+| Model | 0-10 GeV | 10-30 GeV | 30-100 GeV | >100GeV |
+|:---|:----:|:----:|:----:|----:|
+| FCNN | 0.990 | 0.970 | 0.977 | 0.969 |
+| CNN | 0.991 | 0.973 | 0.980 | 0.983 |
+
+* Prompt Muons Samples-2
+
+| Model | 0-10 GeV | 10-30 GeV | 30-100 GeV | >100GeV |
+|:---|:----:|:----:|:----:|----:|
+| FCNN | 0.990 | 0.975 | 0.981 | 0.958 |
+| CNN | 0.991 | 0.976 | 0.983 | 0.983 |
+
+* Displaced Muons Samples
+
+| Model | 0-10 GeV | 10-30 GeV | 30-100 GeV | >100GeV |
+|:---|:----:|:----:|:----:|----:|
+| FCNN | 0.944 | 0.898 | 0.910 | 0.839 |
+| CNN | 0.958 | 0.907 | 0.932 | 0.910 |
