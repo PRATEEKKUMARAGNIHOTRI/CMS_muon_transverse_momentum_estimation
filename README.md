@@ -10,7 +10,7 @@ The code is
 
 > An example of how to use is available [here](https://www.kaggle.com/prateekagnihotri/cms-example)
 
-'''sh
+```sh
 python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
                 --dataset='prompt_new'\
                 --predict='pT'\
@@ -19,6 +19,6 @@ python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
                 --batch_size=512\
                 --folds="0,1,2,3,4,5,6,7,8,9" \
                 --results='/kaggle/working/results'
-'''
+```
 
 ## Results
