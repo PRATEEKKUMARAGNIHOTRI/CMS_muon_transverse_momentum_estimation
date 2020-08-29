@@ -13,7 +13,7 @@ The code is
 1. Make sure that all the libraries mentioned in [requirements.txt](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/requirements.txt) are installed
 2. Clone the repo
 ```sh
-https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation.git
+git clone https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation.git
 ```
 3. Change current directory to the cloned directory and execute main.py with the required arguments
 ```sh
