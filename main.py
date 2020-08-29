@@ -51,7 +51,7 @@ for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset
         if model_name=='GNN':
             model = GNN(dataset, predict)
         if model_name in ('FCNN', 'CNN'):
-            history = train_nn(model, predict, X_train, Y_train, X_test, Y_test, fold, epochs, batch_size, results_path)
+            history = train_nn(model, predict, X_train, Y_train, X_test, Y_test, fold, epochs, batch_size, results_path, model_name)
             train_loss, val_loss = history.history['loss'], history.history['val_loss']
         else:
             train_loss, val_loss = train_gnn(model, predict, X_train, Y_train, X_test, Y_test, fold, epochs, batch_size, results_path)

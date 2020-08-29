@@ -8,7 +8,7 @@ def pTLossTF(y_true,y_pred):
     y_t = K.cast(y_true<80,K.dtype(y_true))*y_true + K.cast(y_true>=80,K.dtype(y_true))*K.cast(y_true<250,K.dtype(y_true))*y_true*2.4 + K.cast(y_true>=160,K.dtype(y_true))*10 
     return K.mean(y_t*K.pow((y_pred-y_true)/y_true,2))/250
 
-def train_nn(model, predict, X_train, Y_train, X_test, Y_test, fold=0, epochs=50, batch_size=512, results_path='./'):
+def train_nn(model, predict, X_train, Y_train, X_test, Y_test, fold=0, epochs=50, batch_size=512, results_path='./', model_name='FCNN'):
     
     assert predict in ('pT', '1/pT', 'pT_classes')
     
@@ -17,6 +17,10 @@ def train_nn(model, predict, X_train, Y_train, X_test, Y_test, fold=0, epochs=50
     Y_train = Y_train.reset_index(drop=True)
     X_test = X_test.reset_index(drop=True)
     Y_test = Y_test.reset_index(drop=True)
+    
+    if model_name=='CNN':
+        X_train = X_train.to_numpy().reshape((-1,4,4,1))
+        X_test = X_test.to_numpy().reshape((-1,4,4,1))
     
     checkpoint = ModelCheckpoint("model.h5", monitor='val_loss', verbose=0, save_best_only=True, mode='min')
     early_stop = EarlyStopping(monitor='val_loss',patience=3,verbose=0)
