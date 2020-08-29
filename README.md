@@ -34,11 +34,11 @@ Note: Give absolute paths as argument
 
 | Metric | Prompt Muons Samples-1 | Prompt Muons Samples-2 | Displaced Muons Samples |
 | :---: | :---: | :---: | :---: |
-| MAE/pT | ![]() | ![]() | ![]() |
-| MAE | ![]() | ![]() | ![]() |
-| Accuracy | ![]() | ![]() | ![]() |
-| F1-score (pT>x) | ![]() | ![]() | ![]() |
-| F1-score (pT<x) | ![]() | ![]() | ![]() |
+| MAE/pT | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P1_MAE_pT.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P2_MAE_pT.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/MAE_pT_displaced.png) |
+| MAE | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P1_MAE.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P2_MAE.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/MAE_displaced.png) |
+| Accuracy | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P1_accuracy.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P2_accuracy.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/Accuracy_displaced.png) |
+| F1-score (pT>x) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P1_f1_class_morethan.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P2_f1_class_morethan.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/f1_class_morethan_displaced.png) |
+| F1-score (pT<x) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P1_f1_class_lessthan.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/P2_f1_class_lessthan.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/pT%20results/f1_class_lessthan_displaced.png) |
 
 ### Regressing 1/pT
 
