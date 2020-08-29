@@ -109,11 +109,12 @@ def save_all_plots(df, results_path ):
     plot_mae(df, results_path )
     
 def plot_ROC_AUC(df):
+    df['pT_classes']=df['true_value'].to_list()
     classes = ['0-10','10-30','30-100','100-inf','micro','macro']
     for i in range(6):
         if i<4:
             fpr,tpr,_ = roc_curve(df['pT_classes']==i, df[classes[i]])
-            roc_auc = auc(fpr, tpr)
+            roc_auc = auc(fpr, tpr) 
         if i==4:
             y_score = df[classes[:4]].to_numpy()
             y_test = np.array([df['pT_classes']==0,df['pT_classes']==1,df['pT_classes']==2,df['pT_classes']==3]).T*1.0
