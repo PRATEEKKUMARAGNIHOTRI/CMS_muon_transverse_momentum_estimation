@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-def get_data(path, dataset, predict, fold=[True]*10):
+def get_data(path, dataset, predict, model_name, fold=[True]*10):
     
     assert dataset in ('prompt_new', 'displaced', 'prompt_old')
     assert predict in ('pT', '1/pT', 'pT_classes')
@@ -54,6 +54,16 @@ def get_data(path, dataset, predict, fold=[True]*10):
 
             X_test = df[features].iloc[shuffled_list[i]]
             Y_test = df[label].astype('float32').iloc[shuffled_list[i]]
+            
+            if model_name=='CNN' and dataset=='prompt_old':
+                X_train['feat0'] = 0
+                X_train['feat1'] = 0
+                X_train['feat2'] = 0
+                X_train['feat3'] = 0
+                X_test['feat0'] = 0
+                X_test['feat1'] = 0
+                X_test['feat2'] = 0
+                X_test['feat3'] = 0
             
             yield X_train, Y_train, X_test, Y_test
             

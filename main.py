@@ -42,7 +42,7 @@ assert dataset in ('prompt_new', 'displaced', 'prompt_old')
 assert predict in ('pT', '1/pT', 'pT_classes')
 assert model_name in ('FCNN', 'CNN', 'GNN')
 
-for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset, predict)):
+for fold, (X_train, Y_train, X_test, Y_test) in enumerate(get_data(path, dataset, predict, model_name)):
     if fold in folds:
         if model_name=='FCNN':
             model = FCNN(dataset, predict)
