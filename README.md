@@ -32,6 +32,14 @@ Note: Give absolute paths as argument
 
 ### Regressing pT
 
+| Metric | Prompt Muons Samples-1 | Prompt Muons Samples-2 | Displaced Muons Samples |
+| :---: | :---: | :---: | :---: |
+| MAE/pT | ![]() | ![]() | ![]() |
+| MAE | ![]() | ![]() | ![]() |
+| Accuracy | ![]() | ![]() | ![]() |
+| F1-score (pT>x) | ![]() | ![]() | ![]() |
+| F1-score (pT<x) | ![]() | ![]() | ![]() |
+
 ### Regressing 1/pT
 
 | Metric | Prompt Muons Samples-1 | Prompt Muons Samples-2 | Displaced Muons Samples |
