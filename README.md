@@ -30,6 +30,18 @@ Note: Give absolute paths as argument
 
 ## Results
 
+### Regressing 1/pT
+
+* Prompt Muons Samples-1
+
+* Prompt Muons Samples-2
+
+* Displaced Muons Samples
+
+| ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_mae_pT.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_mae.png) | ![](https://github.com/PRATEEKKUMARAGNIHOTRI/CMS_muon_transverse_momentum_estimation/blob/master/Results/displ_1_pT_accuracy.png) |
+| --- | --- | --- |
+| MAE/pT Histogram | MAE Histogram | Accuracy Histogram | 
+
 ### Four class classification
 
 * Prompt Muons Samples-1
