@@ -108,7 +108,7 @@ def save_all_plots(df, results_path ):
     plot_mae_pT(df, results_path )
     plot_mae(df, results_path )
     
-def plot_ROC_AUC(df):
+def plot_ROC_AUC(df, results_path):
     df['pT_classes']=df['true_value'].to_list()
     classes = ['0-10','10-30','30-100','100-inf','micro','macro']
     for i in range(6):
