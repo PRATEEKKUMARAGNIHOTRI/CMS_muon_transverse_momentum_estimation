@@ -15,16 +15,15 @@ In the project FCNNs, CNNs, and GNNs are trained and evaluated on the prompt muo
 
 + **Validation Scheme:** 10 fold out-of-fold predictions (i.e. dataset is splitted into 10 small batches, out of them 8 are used for training, 1 as validation dataset and 1 as holdout. This holdout is changed 10 times to give the final scores.)
 + **Metrices Tracked:** <br>
-For pT and 1/pT - 
   + `MAE` - Mean Absolute Error at a given transverse momentum (pT).<br>
   + `MAE/pT` - Ratio of Mean Absolute Error to transverse momentum at a given transverse momentum.<br>
   + `Acurracy` - At a given pT, muon samples can be divided into two classes, one muons with pT more than this given and another class of muons with pT less than this. So, Acurracy at a given pT is the accuracy for these two classes. <br>
   + `F1-score (of class pT>x GeV)` - At a given pT, this is the f1-score of the class of muons with pT more than this given pT.<br>
-  + `F1-score (of class pT<x GeV)` - At a given pT, this is the f1-score of the class of muons with pT less than this given pT.<br>
-<br>For 4-class classification - 
-  + `ROC-AUC Score of each class`
+  + `F1-score (of class pT<x GeV)` - At a given pT, this is the f1-score of the class of muons with pT less than this given pT.<br> 
+  + `ROC-AUC Score of each class` - only in case of four class classification
 
-+ **Preprocessing:** 
++ **Preprocessing:** Standard scaling of input coordinates
+
 
 ## How to use
 
@@ -47,6 +46,16 @@ python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
                 --results='/kaggle/working/results'
 ```
 Note: Give absolute paths as argument
+
+**About the Arguments**
+1. `path` - path of the csv having the coordinates of generated muon samples
+2. `dataset` - specify the samples that you are using (i.e. prompt_new, prompt_old, or displaced)
+3. `predict` - target variable (i.e. pT, 1/pT, or pT_classes)
+4. `model` - architecture to use (i.e. FCNN, CNN, or GNN)
+5. `epochs` - max number of epochs to train, if score converges than due to early-stopping training may stop earlier
+6. `batchsize` - number of samples in a batch
+7. `folds` - a string containing the info on which folds one wants the result
+8. `results` - path of the directory to save the results
 
 ## Results
 
