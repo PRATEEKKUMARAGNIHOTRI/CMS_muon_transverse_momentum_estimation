@@ -47,7 +47,7 @@ python main.py --path='/kaggle/input/cmsnewsamples/new-smaples.csv' \
 ```
 Note: Give absolute paths as argument
 
-**About the Arguments**
+**Arguments**
 1. `path` - path of the csv having the coordinates of generated muon samples
 2. `dataset` - specify the samples that you are using (i.e. prompt_new, prompt_old, or displaced)
 3. `predict` - target variable (i.e. pT, 1/pT, or pT_classes)
