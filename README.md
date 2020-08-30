@@ -22,8 +22,9 @@ For pT and 1/pT -<br>
   + `F1-score (of class pT>x GeV)` - At a given pT, this is the f1-score of the class of muons with pT more than this given pT.<br>
   + `F1-score (of class pT<x GeV)` - At a given pT, this is the f1-score of the class of muons with pT less than this given pT.<br>
 
-For 4-class classification - <br>
+For 4-class classification - 
   + `ROC-AUC Score of each class`
+
 + **Preprocessing:** 
 
 ## How to use
