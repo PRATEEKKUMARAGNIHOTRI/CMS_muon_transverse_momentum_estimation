@@ -15,13 +15,13 @@ In the project FCNNs, CNNs, and GNNs are trained and evaluated on the prompt muo
 
 + **Validation Scheme:** 10 fold out-of-fold predictions (i.e. dataset is splitted into 10 small batches, out of them 8 are used for training, 1 as validation dataset and 1 as holdout. This holdout is changed 10 times to give the final scores.)
 + **Metrices Tracked:** <br>
-For pT and 1/pT -<br> 
+For pT and 1/pT - 
   + `MAE` - Mean Absolute Error at a given transverse momentum (pT).<br>
   + `MAE/pT` - Ratio of Mean Absolute Error to transverse momentum at a given transverse momentum.<br>
   + `Acurracy` - At a given pT, muon samples can be divided into two classes, one muons with pT more than this given and another class of muons with pT less than this. So, Acurracy at a given pT is the accuracy for these two classes. <br>
   + `F1-score (of class pT>x GeV)` - At a given pT, this is the f1-score of the class of muons with pT more than this given pT.<br>
   + `F1-score (of class pT<x GeV)` - At a given pT, this is the f1-score of the class of muons with pT less than this given pT.<br>
-For 4-class classification - 
+<br>For 4-class classification - 
   + `ROC-AUC Score of each class`
 
 + **Preprocessing:** 
