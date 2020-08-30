@@ -7,11 +7,11 @@ In the project FCNNs, CNNs, and GNNs are trained and evaluated on the prompt muo
 
 **Validation Scheme:** 10 fold out-of-fold predictions (i.e. dataset is splitted into 10 small batches, out of them 8 are used for training, 1 as validation dataset and 1 as holdout. This holdout is changed 10 times to give the final scores.)<br><br>
 **Metrices Tracked:** <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. `MAE` - Mean Absolute Error at a given transverse momentum (pT)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. `MAE/pT` - Ratio of Mean Absolute Error to transverse momentum at a given transverse momentum<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. `Acurracy` - At a given pT, muon samples can be divided into two classes, one muons with pT more than this given and another class of muons with pT less than this. So, Acurracy at a given pT is the accuracy for these two classes. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. `F1-score (of class pT>x GeV)` - <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. `F1-score (of class pT<x GeV)` - <br><br>
+1. `MAE` - Mean Absolute Error at a given transverse momentum (pT)<br>
+2. `MAE/pT` - Ratio of Mean Absolute Error to transverse momentum at a given transverse momentum<br>
+3. `Acurracy` - At a given pT, muon samples can be divided into two classes, one muons with pT more than this given and another class of muons with pT less than this. So, Acurracy at a given pT is the accuracy for these two classes. <br>
+4. `F1-score (of class pT>x GeV)` - <br>
+5. `F1-score (of class pT<x GeV)` - <br><br>
 **Preprocessing:**
 
 ## How to use
