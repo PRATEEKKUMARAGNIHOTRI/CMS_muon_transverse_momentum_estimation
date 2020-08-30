@@ -11,8 +11,9 @@ In the project FCNNs, CNNs, and GNNs are trained and evaluated on the prompt muo
 | :---: | :---: |
 | 1/Transverse_momentum (1/pT) | Mean Square Error (MSE) |
 | Transverse Momentum | <img src="https://render.githubusercontent.com/render/math?math=y%5C_true%20*%20(%5Cfrac%7By%5C_true%20-%20y%5C_predicted%7D%7By%5C_true%7D)%5E%7B2%7D"> |
-| 4 class classification | |
-| ^^ (0-10 GeV, 10-30 GeV, 30-100 GeV, >100 GeV) ^^ | Focal Loss |
+
+| 4 class classification ||
+|(0-10 GeV, 10-30 GeV, 30-100 GeV, >100 GeV) | Focal Loss |
 
 **Validation Scheme:** 10 fold out-of-fold predictions (i.e. dataset is splitted into 10 small batches, out of them 8 are used for training, 1 as validation dataset and 1 as holdout. This holdout is changed 10 times to give the final scores.)<br><br>
 **Metrices Tracked:** <br>
